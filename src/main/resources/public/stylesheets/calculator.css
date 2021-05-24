@@ -181,8 +181,3 @@ input {
 .weighted-btn:active {
     transform: scale(0.9);
 }
-
-
-#calc-result {
-    margin-left: 10pt;
-}
