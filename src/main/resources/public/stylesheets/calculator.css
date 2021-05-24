@@ -2,7 +2,6 @@
     margin-left: 3%;
     margin-right: 3%;
     border-top: 1.5rem solid #333333;
-
 }
 
 .page-container {
@@ -20,14 +19,12 @@
     min-height: 48rem;
     border-radius: 5px;
     border: 1.5px solid #e3eef1;
-
 }
 
 .page-footer {
     margin-left: 3%;
     margin-right: 3%;
     border-bottom: 2.5rem solid #333333;
-
 }
 
 .content-header {
@@ -37,7 +34,6 @@
     padding-top:2.5%;
     padding-left: 1.5%;
 }
-
 
 .content-name {
     font-size: large;
@@ -117,6 +113,7 @@ input {
     overflow-y: auto;
     margin-right: 10px;
     margin-top: 30px;
+    height: 500px;
 }
 
 .score {
@@ -124,7 +121,6 @@ input {
     left: 10px;
     top: 5px;
 }
-
 
 .total {
     position: absolute;
@@ -149,7 +145,7 @@ input {
     float: right;
 }
 
-.mean-btn {
+.mean-btn, .add-btn{
     background-color: #c92525;
     border-radius: 2px;
     border: none;
@@ -164,20 +160,40 @@ input {
     padding-right: 20px;
 }
 
-.mean-btn:hover {
+.del-btn {
+    background-color: #c92525;
+    border-radius: 2px;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 20px;
+    margin-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mean-btn:hover, .weighted-btn:hover, .add-btn:hover, .del-btn:hover {
     background-color: green;
     transform: scale(1.1);
 }
 
-.mean-btn:active {
+.mean-btn:active, .weighted-btn:active, .add-btn:active, .del-btn:active {
     transform: scale(0.9);
 }
 
-.weighted-btn:hover {
-    background-color: green;
-    transform: scale(1.1);
-}
-
-.weighted-btn:active {
-    transform: scale(0.9);
+.newName, .newShortName {
+    min-width: 130px;
+    display: table-cell;
+    border-collapse: collapse;
+    border:none;
+    font-weight: medium;
+    white-space: nowrap;
+    float: left;
+    background: transparent;
+    font-size: 12pt;
+    font-weight: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

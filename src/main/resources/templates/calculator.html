@@ -3,10 +3,13 @@
 <head>
 <title>Coursys - Formula Tester</title>
 <link rel="stylesheet" href="/stylesheets/calculator.css"/>
-<!-- <link rel="stylesheet" href="/src/main/resources/public/stylesheets/calculator.css"/> -->
 <link rel="icon" href="https://www.sfu.ca/favicon.ico">
-<!-- <script src="/src/main/java/com/example/calculator.js"></script> -->
 <script src="/javascript/calculator.js"></script>
+
+<!-- For live server -->
+<!-- <link rel="stylesheet" href="/src/main/resources/public/stylesheets/calculator.css"/>
+<script src="/src/main/resources/public/javascript/calculator.js"></script> -->
+
 </head>
 <body style="background-color: #A9182A;">
   <header class=page-header></header>
@@ -16,7 +19,7 @@
         <h1 class="content-name">Activities</h1>
           <p class="content-description">Give grades to the numeric activities: </p>
         <div class="table-container">
-          <table class="content-table">
+          <table class="content-table" id="table">
             <tr class="row-1" style="text-align: left;">
               <th>Name</th>
               <th>Short Name</th>
@@ -82,6 +85,8 @@
         <p id="calc-result" style="text-indent: 10pt;"></p>
         <button type="button" class="mean-btn" onclick="calcMean()">MEAN</button>
         <button type="button" class="weighted-btn" onclick="calcWeighted()">WEIGHTED</button>
+        <button type="button" class="add-btn" onclick="addRow()">ADD</button>
+        <button type="button" class="del-btn" onclick="delRow()">DELETE</button>
       </div>
   </div>
   <footer class=page-footer></footer>
