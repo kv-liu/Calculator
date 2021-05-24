@@ -22,10 +22,8 @@ function calcMean() {
         }
     }
 
-
     console.log("length: " + gradeTotal.length);
     console.log("length2: " + count);
-
 
     for (var i = 0; i < length; i++) {
         if (gradeScore[i].value == 0 && gradeTotal[i].value > 0) {
@@ -37,7 +35,6 @@ function calcMean() {
         } else if (gradeTotal[i].value == 0) {
             console.log("Error");
         }
-
     }
 
     result = sum/count;
@@ -46,11 +43,6 @@ function calcMean() {
     console.log("result: " + result);
 
     calcResult.innerHTML = "The Mean (average) is: " + result + "%";
-}
-
-function count(){
-
-    
 }
 
 function calcWeighted() {
@@ -102,7 +94,6 @@ function calcWeighted() {
     calcResult.innerHTML = "The Weighted Average is: " + result + "%";
 }
 
-
 function updatePercent() {
     var gradeScore = document.getElementsByClassName("score");
     var gradeTotal = document.getElementsByClassName("total");
@@ -114,7 +105,6 @@ function updatePercent() {
         percent[i].innerHTML = temp + "%";
     }
 }
-
 
 function isValid(evt){
     var charCode = (evt.which) ? evt.which : event.keyCode;
