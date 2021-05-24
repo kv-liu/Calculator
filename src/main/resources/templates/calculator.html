@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/src/main/resources/public/stylesheets/calculator.css"/>
 
 <link rel="icon" href="https://www.sfu.ca/favicon.ico">
+<script src="/src/main/java/com/example/calculator.js"></script>
 </head>
 
 <body style="background-color: #A9182A;">
@@ -28,59 +29,60 @@
               <td>Activity 1</td>
               <td>A1</td>
               <td>
-                <input type="text">
+                <input type="number" class="weight" min=0 onkeypress="return isValid(event)">
               </td>
               <td>
-                <input type="text" class="score">
+                <input type="number" class="score" oninput="updatePercent()" min=0 onkeypress="return isValid(event)">
                 <img src="https://static.thenounproject.com/png/2342342-200.png" width="25" height="25" class="slash" alt="forward slash">
-                <input type="text" class="total">
+                <input type="number" class="total" oninput="updatePercent()" min=0 onkeypress="return isValid(event)">
               </td>
-              <td></td>
+              <td class="percent"></td>
             </tr>
             <tr>
               <td>Activity 2</td>
               <td>A2</td>
               <td>
-                <input type="text">
+                <input type="number" class="weight" min=0 onkeypress="return isValid(event)">
               </td>
               <td>
-                <input type="text" class="score">
+                <input type="number" class="score" oninput="updatePercent()" min=0 onkeypress="return isValid(event)">
                 <img src="https://static.thenounproject.com/png/2342342-200.png" width="25" height="25" class="slash" alt="forward slash">
-                <input type="text" class="total">
+                <input type="number" class="total" oninput="updatePercent()" min=0 onkeypress="return isValid(event)">
               </td>
-              <td></td>
+              <td class="percent"></td>
             </tr>
             <tr>
               <td>Activity 3</td>
               <td>A3</td>
               <td>
-                <input type="text">
+                <input type="number" class="weight" min=0 onkeypress="return isValid(event)">
               </td>
               <td>
-                <input type="text" class="score">
+                <input type="number" class="score" oninput="updatePercent()" min=0 onkeypress="return isValid(event)">
                 <img src="https://static.thenounproject.com/png/2342342-200.png" width="25" height="25" class="slash" alt="forward slash">
-                <input type="text" class="total">
+                <input type="number" class="total" oninput="updatePercent()" min=0 onkeypress="return isValid(event)">
               </td>
-              <td></td>
+              <td class="percent"></td>
             </tr>
             <tr>
               <td>Activity 4</td>
               <td>A4</td>
               <td>
-                <input type="text">
+                <input type="number" class="weight" min=0 onkeypress="return isValid(event)">
               </td>
               <td>
-                <input type="text" class="score">
+                <input type="number" class="score" oninput="updatePercent()" min=0 onkeypress="return isValid(event)">
                 <img src="https://static.thenounproject.com/png/2342342-200.png" width="25" height="25" class="slash" alt="forward slash">
-                <input type="text" class="total">
+                <input type="number" class="total" oninput="updatePercent()" min=0 onkeypress="return isValid(event)">
               </td>
-              <td></td>
+              <td class="percent"></td>
             </tr>
           </table>
         </div>
         <p class="content-result">Result</p>
-        <button type="button" class="mean-btn">MEAN</button>
-        <button type="button" class="weighted-btn">WEIGHTED</button>
+        <p id="calc-result"></p>
+        <button type="button" class="mean-btn" onclick="calcMean()">MEAN</button>
+        <button type="button" class="weighted-btn" onclick="calcWeighted()">WEIGHTED</button>
       </div>
   </div>
   <footer class=page-footer></footer>
