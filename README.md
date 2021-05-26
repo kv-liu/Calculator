@@ -1,3 +1,10 @@
+# Note
+calculator.css & calculator.js in public folder
+
+calculator.html in templates folder
+
+
+
 # java-getting-started
 
 A barebones Java app, which can easily be deployed to Heroku.
