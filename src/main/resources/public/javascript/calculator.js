@@ -33,12 +33,21 @@ function calcMean() {
             break;
         } else if (gradeScore[i].value != null && gradeTotal[i].value == "0") {
             alert("Grades cannot be out of zero!");
+        } else if (gradeScore[i].value.length == 0 && gradeTotal[i].value.length != 0) {
+            alert("Enter a valid grade at row: " + (i+1));
+        } else if (gradeScore[i].value.length != 0 && gradeTotal[i].value.length == 0) {
+            alert("Enter a valid grade at row: " + (i+1));
         }
     }
 
     result = sum/count;
     result *= 100;
-    calcResult.innerHTML = "The Mean (average) is: " + result + "%";
+
+    if (!isNaN(result) && sum != 0) {
+        calcResult.innerHTML = "The Mean (average) is: " + result.toFixed(2) + "%";
+    } else {
+        calcResult.innerHTML = "Invalid Input(s): Please enter some grades";
+    }
 }
 
 function calcWeighted() {
@@ -80,13 +89,28 @@ function calcWeighted() {
             break;
         } else if (gradeScore[i].value != null && gradeTotal[i].value == "0") {
             alert("Grades cannot be out of zero!");
+        }  else if (gradeScore[i].value.length == 0 && gradeTotal[i].value.length != 0) {
+            alert("Enter a valid grade at row: " + (i+1));
+        } else if (gradeScore[i].value.length != 0 && gradeTotal[i].value.length == 0) {
+            alert("Enter a valid grade at row: " + (i+1));
         }
+
+        if (weightScore[i].value.length != 0 && gradeScore[i].value.length == 0 && gradeTotal[i].value.length == 0) {
+            alert("Please enter a grade for row: " + (i+1));
+        } else if (weightScore[i].value.length == 0 && gradeScore[i].value.length != 0 && gradeTotal[i].value.length != 0) {
+            alert("Please enter a weight for row: " + (i+1));
+        } 
     }
 
     result = sum/weightTotal;
     result *= 100;
 
-    calcResult.innerHTML = "The Weighted Average is: " + result + "%";
+    if (!isNaN(result)) {
+        calcResult.innerHTML = "The Weighted Average is: " + result.toFixed(2) + "%";
+    } else {
+        calcResult.innerHTML = "Invalid Input(s): Please enter some grades & their weights";
+    }
+
 }
 
 function updatePercent() {
@@ -97,7 +121,13 @@ function updatePercent() {
     for (var i = 0; i < gradeScore.length; i++) {
         temp = gradeScore[i].value/gradeTotal[i].value;
         temp *= 100;
-        percent[i].innerHTML = temp + "%";
+
+        if (isNaN(temp)) {
+            percent[i].innerHTML = "Invalid Input";
+        } else {
+            percent[i].innerHTML = temp.toFixed(2) + "%";
+        }
+        
     }
 }
 
